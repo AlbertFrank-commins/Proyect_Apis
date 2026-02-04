@@ -12,3 +12,36 @@
   </header>
 
   <main class="container">
+
+     <!-- SECCIÓN POKÉMON -->
+    <section class="card">
+      <h2>Buscar Pokémon</h2>
+
+      <div class="row">
+        <input id="pokemonInput" type="text" placeholder="Ej: pikachu o 25" />
+        <button id="btnBuscar">Buscar</button>
+      </div>
+
+      <p class="hint">Tip: puedes buscar por nombre (pikachu) o número (25).</p>
+
+      <div id="pokemonResultado" class="pokemon-result hidden">
+        <div class="pokemon-top">
+          <img id="pokeImg" alt="Imagen del Pokémon" />
+          <div>
+            <h3 id="pokeNombre"></h3>
+            <p id="pokeTipos"></p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <h4>Estadísticas (mínimo 3)</h4>
+          <ul>
+            <li><b>HP:</b> <span id="statHp"></span></li>
+            <li><b>Ataque:</b> <span id="statAtk"></span></li>
+            <li><b>Defensa:</b> <span id="statDef"></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p id="pokemonError" class="error"></p>
+    </section>
