@@ -50,3 +50,67 @@ button{
 button:hover{
   background: #1d4ed8;
 }
+
+.hint{
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.pokemon-result{
+  margin-top: 14px;
+  border-top: 1px solid #eee;
+  padding-top: 14px;
+}
+
+.pokemon-top{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.pokemon-top img{
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.stats{
+  margin-top: 10px;
+  background: #f9fafb;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.stats ul{
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.joke-box{
+  margin-top: 14px;
+  background: #f9fafb;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.error{
+  margin-top: 10px;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.hidden{
+  display: none;
+}
+
+.footer{
+  text-align: center;
+  padding: 14px;
+  color: #6b7280;
+}

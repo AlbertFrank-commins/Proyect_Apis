@@ -71,3 +71,40 @@ async function buscarPokemon() {
     pokemonError.textContent = err.message;
   }
 }
+
+// ======= JOKEAPI =======
+async function traerChiste() {
+  jokeError.textContent = "";
+
+  try {
+    // JokeAPI puede devolver:
+    // type: "single" => { joke: "..." }
+    // type: "twopart" => { setup: "...", delivery: "..." }
+    const url = "https://v2.jokeapi.dev/joke/Any?lang=es";
+    const resp = await fetch(url);
+
+    if (!resp.ok) {
+      throw new Error("No se pudo obtener un chiste. Intenta de nuevo.");
+    }
+
+    const data = await resp.json();
+
+    if (data.type === "single") {
+      jokeText.textContent = data.joke;
+    } else {
+      jokeText.textContent = `${data.setup} — ${data.delivery}`;
+    }
+  } catch (err) {
+    jokeError.textContent = err.message;
+  }
+}
+
+// ======= EVENTOS =======
+btnBuscar.addEventListener("click", buscarPokemon);
+
+// Buscar también presionando Enter
+pokemonInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") buscarPokemon();
+});
+
+btnChiste.addEventListener("click", traerChiste);
