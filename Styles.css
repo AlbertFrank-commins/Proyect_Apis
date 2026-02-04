@@ -20,7 +20,7 @@ body{
   background: white;
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
 }
 
 .row{
@@ -70,8 +70,8 @@ button:hover{
 }
 
 .pokemon-top img{
-  width: 120px;
-  height: 120px;
+  width: 230px;
+  height: 200px;
   object-fit: contain;
   background: #f3f4f6;
   border-radius: 10px;
